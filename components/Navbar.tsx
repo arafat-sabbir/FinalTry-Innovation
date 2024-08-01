@@ -50,11 +50,13 @@ const Navbar = () => {
               {theme === "light" ? (
                 <Sun className="h-[1.2rem] w-[1.2rem] rotate-90 scale-100 transition-all" />
               ) : (
-                <Moon className="h-[1.2rem] w-[1.2rem]  scale-100 transition-all" />
+                <Moon className="h-[1.2rem] w-[1.2rem] text-white scale-100 transition-all" />
               )}
               <span className="sr-only">Toggle theme</span>
             </Button>
-            <Button className="lg:block hidden dark:text-white">Support Us</Button>
+            <Button className="lg:block hidden dark:text-white">
+              Support Us
+            </Button>
           </div>
           <div className="lg:hidden block">
             {!open && (
