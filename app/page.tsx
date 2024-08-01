@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
 import OurProject from "../components/OurProject";
 import OurService from "@/components/OurService";
+import OurTechStacks from "@/components/OurTechStacks";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Banner />
       <OurService />
       <OurProject />
+      <OurTechStacks />
     </>
   );
 }

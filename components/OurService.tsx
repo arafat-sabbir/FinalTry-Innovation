@@ -3,49 +3,50 @@ import Container from "./Container";
 import { HoverEffect } from "./ui/card-hover-effect";
 
 const OurService = () => {
-  const projects = [
+  const services = [
     {
+      image: "/assets/icons/software.png",
       title: "Software Development",
       description:
-        "A technology company that builds economic infrastructure for the internet.",
-      link: "https://stripe.com",
+        "We provide custom software solutions tailored to meet the unique needs of your business, ensuring efficiency and innovation.",
     },
     {
+      image: "/assets/icons/web.png",
       title: "Web Development",
       description:
-        "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-      link: "https://netflix.com",
+        "Our team specializes in creating responsive and user-friendly websites that enhance your online presence and engage your audience.",
     },
     {
+      image: "/assets/icons/app.png",
       title: "Mobile Application",
       description:
-        "A multinational technology company that specializes in Internet-related services and products.",
-      link: "https://google.com",
+        "We design and develop mobile applications for iOS and Android, offering seamless experiences that cater to your specific business requirements.",
     },
     {
+      image: "/assets/icons/logo-design.png",
       title: "Logo & Brand Design",
       description:
-        "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-      link: "https://meta.com",
+        "Our creative team helps you establish a strong brand identity with unique logo designs and comprehensive branding strategies.",
     },
     {
+      image: "/assets/icons/content.png",
       title: "Content Writing",
       description:
-        "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-      link: "https://amazon.com",
+        "We offer professional content writing services that communicate your brand's message effectively, engaging your target audience.",
     },
     {
+      image: "/assets/icons/seo.png",
       title: "SEO",
       description:
-        "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-      link: "https://microsoft.com",
+        "Our SEO experts optimize your website to improve visibility and ranking on search engines, driving more organic traffic to your site.",
     },
   ];
+
   return (
     <Container>
       <div>
         <div className="max-w-5xl mx-auto px-8">
-          <HoverEffect items={projects} />
+          <HoverEffect items={services} />
         </div>
       </div>
     </Container>

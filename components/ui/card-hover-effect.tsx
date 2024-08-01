@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -10,7 +11,7 @@ export const HoverEffect = ({
   items: {
     title: string;
     description: string;
-    link: string;
+    image: string;
   }[];
   className?: string;
 }) => {
@@ -24,9 +25,8 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={item?.link}
+        <div
+          key={item?.title}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -49,10 +49,16 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <Image
+              src={item?.image}
+              alt={item?.title}
+              width={65}
+              height={65}
+            ></Image>
+            <CardTitle className="mt-8">{item.title}</CardTitle>
+            <CardDescription className="text-pretty mt-1">{item.description}</CardDescription>
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );
@@ -68,7 +74,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden dark:bg-gray-800 bg-gray-50/80  border  dark:border-white/[0.2] group-hover:border-slate-700 transition-all duration-300 relative z-20",
+        "rounded-2xl h-[300px]  w-[300px] p-1 overflow-hidden dark:bg-gray-800 bg-gray-50/80  border  dark:border-white/[0.2] group-hover:border-slate-700 transition-all duration-300 relative z-20",
         className
       )}
     >
