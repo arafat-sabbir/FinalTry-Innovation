@@ -54,7 +54,7 @@ const Navbar = () => {
               )}
               <span className="sr-only">Toggle theme</span>
             </Button>
-            <Button className="lg:block hidden">Support Us</Button>
+            <Button className="lg:block hidden dark:text-white">Support Us</Button>
           </div>
           <div className="lg:hidden block">
             {!open && (
