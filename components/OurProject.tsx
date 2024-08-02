@@ -2,12 +2,14 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Container from "./Container";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
+import RevealText from "./RevealText";
 
 const OurProject = () => {
   return (
     <Container className="mt-8">
-      <h1 className="text-center text-xl font-semibold bg-primary rounded-full w-[150px] mx-auto px-2 text-white">
-        Our Projects
+      <h1 >
+        <RevealText inputString="Our Projects"></RevealText>
       </h1>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3  gap-4">

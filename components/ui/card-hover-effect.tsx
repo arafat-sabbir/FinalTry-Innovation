@@ -19,7 +19,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-6 py-10",
+        "grid grid-cols-1 md:grid-cols-2  justify-center items-center justify-items-center lg:grid-cols-3 gap-6 py-10",
         className
       )}
     >
@@ -33,7 +33,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-primary/10 dark:bg-primary/10 block  rounded-3xl"
+                className="absolute inset-0 h-[320px]  w-[320px]  bg-primary/10 dark:bg-primary/10 block  rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{

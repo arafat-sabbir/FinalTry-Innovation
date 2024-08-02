@@ -1,5 +1,6 @@
 "use client";
 import Container from "./Container";
+import RevealText from "./RevealText";
 import { HoverEffect } from "./ui/card-hover-effect";
 
 const OurService = () => {
@@ -44,9 +45,9 @@ const OurService = () => {
 
   return (
     <Container>
-      <h1 className="text-4xl font-bold text-center"><span className="text-primary font-semibold">Services</span> We Provide</h1>
+      <RevealText className="dark:text-primary" inputString="Our Services"></RevealText>
       <div>
-        <div className=" mx-auto px-8">
+        <div className=" mx-auto ">
           <HoverEffect items={services} />
         </div>
       </div>

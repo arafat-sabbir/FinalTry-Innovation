@@ -1,11 +1,22 @@
 import Image from "next/image";
+import RevealText from "./RevealText";
+import Container from "./Container";
 
 const OurTechStacks = () => {
-  return <section>
-
-    <h1 className="text-4xl font-bold text-center">Our Tech Stack</h1>
-    <Image src="/assets/icons/software_development.png" alt="Our Tech Stack" width={100} height={100} />
-  </section>;
+  return (
+    <Container>
+      <RevealText
+        className="dark:text-primary"
+        inputString="Tech Stack We Use"
+      ></RevealText>
+      <Image
+        src="/assets/icons/software_development.png"
+        alt="Our Tech Stack"
+        width={100}
+        height={100}
+      />
+    </Container>
+  );
 };
 
 export default OurTechStacks;
