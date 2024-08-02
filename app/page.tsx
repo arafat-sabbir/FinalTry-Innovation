@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import OurProject from "../components/OurProject";
 import OurService from "@/components/OurService";
 import OurTechStacks from "@/components/OurTechStacks";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <OurService />
       <OurProject />
       <OurTechStacks />
+      <Footer />
     </>
   );
 }
