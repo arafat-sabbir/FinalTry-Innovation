@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
 
             <div className="mt-6 lg:mt-0 lg:flex-1">
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 <div>
                   <h3 className="text-gray-700 uppercase dark:text-white">
                     About
@@ -109,9 +109,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
           <hr className="h-px my-6 bg-gray-200 border-none dark:bg-gray-700" />
-
           <div>
             <p className="text-center text-gray-500 dark:text-gray-400">
               © Brand 2024 - All rights reserved

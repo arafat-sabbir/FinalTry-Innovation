@@ -20,7 +20,10 @@ const RevealText = ({
 
   return (
     <motion.h1
-      className={cn("text-3xl font-semibold text-center dark:text-primary", className)}
+      className={cn(
+        "text-3xl font-semibold text-center dark:text-primary",
+        className
+      )}
       initial="hidden"
       whileInView="reveal"
       transition={{ staggerChildren: 0.2 }}

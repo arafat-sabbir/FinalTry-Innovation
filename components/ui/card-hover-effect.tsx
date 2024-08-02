@@ -19,14 +19,14 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  justify-center items-center justify-items-center lg:grid-cols-3 gap-6 py-10",
+        "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3    justify-items-center gap-7 ",
         className
       )}
     >
       {items.map((item, idx) => (
         <div
           key={item?.title}
-          className="relative group  block p-2 h-full w-full"
+          className="relative group  block p-2 h-[300px] w-[300px]"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -49,13 +49,16 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <Image
+              className="service-image cursor-pointer"
               src={item?.image}
               alt={item?.title}
               width={65}
               height={65}
             ></Image>
             <CardTitle className="mt-8">{item.title}</CardTitle>
-            <CardDescription className="text-pretty mt-1">{item.description}</CardDescription>
+            <CardDescription className="text-pretty mt-1">
+              {item.description}
+            </CardDescription>
           </Card>
         </div>
       ))}

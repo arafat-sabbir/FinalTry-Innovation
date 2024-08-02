@@ -20,9 +20,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border-b text-black w-full relative dark:bg-gray-900 dark:text-white">
+    <nav className="bg-white border-b text-black w-full relative dark:bg-gray-900 dark:text-white ">
       <Container>
-        <div className="h-20 items-center px-10 flex justify-between">
+        <div className="h-20 items-center px-5 lg:px-0 flex justify-between">
           <div>
             <h1 className="text-xl font-semibold">
               Final<span className="text-primary font-bold">Try</span>

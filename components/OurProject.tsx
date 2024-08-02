@@ -4,12 +4,16 @@ import Image from "next/image";
 import Container from "./Container";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import RevealText from "./RevealText";
+import SectionHeading from "./SectionHeading";
 
 const OurProject = () => {
   return (
     <Container className="mt-8">
-      <h1 >
-        <RevealText inputString="Our Projects"></RevealText>
+      <h1>
+        <SectionHeading
+          foreGroundText="OUR PROJECTS"
+          backgroundText="PROJECT WE'VE DONE"
+        ></SectionHeading>
       </h1>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3  gap-4">

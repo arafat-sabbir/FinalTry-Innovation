@@ -12,7 +12,7 @@ const Banner = () => {
               SOLUTION FOR YOUR BUSINESS
             </h1>
             <h1 className="text-5xl font-semibold tracking-wide">
-              Providing Technology <br /> For Smart
+              Providing Technology <br />  For Smart
               <span className="text-primary font-bold">IT Solution</span>
             </h1>
           </div>
