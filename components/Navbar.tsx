@@ -26,7 +26,7 @@ const Navbar = () => {
           <div>
             <h1 className="text-xl font-semibold">
               Final<span className="text-primary font-bold">Try</span>
-              Innovation
+              Innovations
             </h1>
           </div>
 

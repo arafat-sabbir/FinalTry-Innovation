@@ -10,7 +10,7 @@ const inter = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "FinalTry_Inovation",
+  title: "FinalTry_Innovations",
   description: "An innovative software development company",
 };
 
