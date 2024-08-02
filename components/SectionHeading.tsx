@@ -16,7 +16,7 @@ const SectionHeading = ({
     <div className="relative w-full  h-[200px] flex items-center justify-center">
       <h1
         className={cn(
-          "text-center text-8xl font-semibold opacity-10",
+          "text-center lg:text-8xl md:text-7xl font-semibold opacity-10",
           backGroundClassName
         )}
       >
