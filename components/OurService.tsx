@@ -45,9 +45,12 @@ const OurService = () => {
 
   return (
     <Container>
-      <RevealText className="dark:text-primary" inputString="Our Services"></RevealText>
+      <RevealText
+        className="dark:text-primary"
+        inputString="Our Services"
+      ></RevealText>
       <div>
-        <div className=" mx-auto ">
+        <div className="">
           <HoverEffect items={services} />
         </div>
       </div>
