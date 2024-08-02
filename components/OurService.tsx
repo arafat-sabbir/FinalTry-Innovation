@@ -44,8 +44,9 @@ const OurService = () => {
 
   return (
     <Container>
+      <h1 className="text-4xl font-bold text-center"><span className="text-primary font-semibold">Services</span> We Provide</h1>
       <div>
-        <div className="max-w-5xl mx-auto px-8">
+        <div className=" mx-auto px-8">
           <HoverEffect items={services} />
         </div>
       </div>

@@ -68,8 +68,14 @@
     @apply bg-background text-foreground;
   }
 }
-::selection{
-  background-color: #41B4A3 ;
-  color:white;
+::selection {
+  background-color: #41b4a3;
+  color: white;
+}
+html {
+  --cursor-color: #333
+}
 
+.dark {
+  --cursor-color: #fff
 }

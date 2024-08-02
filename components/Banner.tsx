@@ -1,20 +1,29 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Container from "./Container";
 
 const Banner = () => {
   return (
-    <section className="flex bg-gray-300 dark:bg-gray-800 justify-center  items-center justify-items-center h-[70vh]">
-      <div className="space-y-6">
-        <p className="text-center text-lg bg-primary/50 md:w-[400px]  rounded-full  px-2 mx-auto">
-          Hassle Free Software Development Service
-        </p>
-        <h1 className="text-4xl text-center font-semibold ">
-          Your Idea Our Service == Your Desired Software
-        </h1>
-        <p></p>
-        <div className="text-center">
-          <Button className="dark:text-white">Book An Appointment</Button>
+    <section className="bg-[url('/assets/background/banner_background.svg')] bg-no-repeat">
+      <Container>
+        <div className="flex justify-between  items-center justify-items-center h-[70vh]   ">
+          <div>
+            <h1 className="text-primary text-xl tracking-wide font-semibold mb-2">SOLUTION FOR YOUR BUSINESS</h1>
+            <h1 className="text-5xl font-semibold tracking-wide">
+              Providing Technology <br /> For Smart{" "}
+              <span className="text-primary font-bold">IT Solution</span>
+            </h1>
+          </div>
+          <div>
+            <Image
+              src={"/assets/background/banner_background.png"}
+              width={500}
+              height={500}
+              alt="bannerPerson"
+            ></Image>
+          </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

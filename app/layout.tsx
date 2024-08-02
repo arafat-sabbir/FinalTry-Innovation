@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import AnimatedCursor from "react-animated-cursor";
 import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
 
@@ -28,7 +29,20 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-        </ThemeProvider>{" "}
+          <AnimatedCursor
+            innerSize={8}
+            outerSize={35}
+            innerScale={1}
+            outerScale={2}
+            outerAlpha={0}
+            innerStyle={{
+              backgroundColor: "var(--cursor-color)",
+            }}
+            outerStyle={{
+              border: "3px solid #41b4a3",
+            }}
+          />
+        </ThemeProvider>
       </body>
     </html>
   );
