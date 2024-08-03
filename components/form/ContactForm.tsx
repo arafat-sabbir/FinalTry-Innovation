@@ -3,12 +3,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Form } from "@/components/ui/form";
-import { useState } from "react";
 import CustomFormField from "../CustomFormFIeld";
-import SubmitButton from "../SubmitButton";
 import { ContactFormValidation } from "@/lib/validation";
 import { SelectItem } from "../ui/select";
 import CustomButton from "../ui/CustomButton";
+import { toast } from "sonner";
 
 export enum FormFieldType {
   INPUT = "input",
@@ -17,13 +16,13 @@ export enum FormFieldType {
   SELECT = "select",
 }
 const ContactForm = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const form = useForm<z.infer<typeof ContactFormValidation>>({
     resolver: zodResolver(ContactFormValidation),
     defaultValues: {
       name: "",
       email: "",
       phone: "",
+      message: "",
     },
   });
 
@@ -37,8 +36,21 @@ const ContactForm = () => {
   ];
 
   // 2. Define a submit handler.
-  const onSubmit = (values: z.infer<typeof ContactFormValidation>) => {
-    console.log(values);
+  const onSubmit = async (values: z.infer<typeof ContactFormValidation>) => {
+    const id = toast.loading("Sending Message...");
+    const res = await fetch("/api/sendMail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    });
+    if (res.status === 200) {
+      toast.success("Message Sent Successfully", { id });
+      form.reset();
+    } else {
+      toast.error("Something went wrong", { id });
+    }
   };
   return (
     <Form {...form}>
@@ -49,7 +61,7 @@ const ContactForm = () => {
               control={form.control}
               className="placeholder:text-lg"
               fieldType={FormFieldType.INPUT}
-              name="userName"
+              name="name"
               placeholder="Enter Full Name"
               iconSrc="/assets/icons/user.svg"
               iconAlt="user"

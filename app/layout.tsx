@@ -3,6 +3,7 @@ import { Roboto, Barlow } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
 import AnimatedCursor from "react-animated-cursor";
+import { Toaster } from "sonner";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -10,7 +11,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "FinalTry_Innovations",
+  title: "FinalTry Innovations",
   description: "An innovative software development company",
 };
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
         </ThemeProvider>
+        <Toaster richColors={true} />
         <AnimatedCursor
           innerSize={8}
           outerSize={35}
