@@ -5,6 +5,8 @@ import { CardContainer, CardItem } from "./ui/3d-card";
 const Banner = () => {
   return (
     <section className="bg-[url('/assets/background/banner_background.svg')] bg-no-repeat">
+      <div>
+      </div>
       <Container>
         <div className="flex justify-between  items-center justify-items-center h-[70vh]   ">
           <div>

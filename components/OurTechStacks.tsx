@@ -3,11 +3,20 @@ import Container from "./Container";
 import SectionHeading from "./SectionHeading";
 import Image from "next/image";
 
+interface TechStackItem {
+  name: string;
+  image: string;
+}
+
 const OurTechStacks = () => {
-  const fontEndImages = [
+  const frontendImages: TechStackItem[] = [
     {
       name: "Javascript",
       image: "/assets/logo/js.png",
+    },
+    {
+      name: "Typescript",
+      image: "/assets/logo/typescript.png",
     },
     {
       name: "React",
@@ -18,42 +27,133 @@ const OurTechStacks = () => {
       image: "/assets/logo/nextjs.png",
     },
     {
+      name: "Redux",
+      image: "/assets/logo/redux.png",
+    },
+    {
       name: "Tailwind Css",
       image: "/assets/logo/tailwind.png",
     },
   ];
-  const backendImages = [];
-  const mobileDevImages = [];
+
+  const backendImages: TechStackItem[] = [
+    {
+      name: "Node Js",
+      image: "/assets/logo/node.png",
+    },
+    {
+      name: "Typescript",
+      image: "/assets/logo/typescript.png",
+    },
+    {
+      name: "Express Js",
+      image: "/assets/logo/express.png",
+    },
+    {
+      name: "MongoDb",
+      image: "/assets/logo/mongo.png",
+    },
+    {
+      name: "Mongoose",
+      image: "/assets/logo/mongoose.png",
+    },
+    {
+      name: "JWT",
+      image: "/assets/logo/jwt.png",
+    },
+  ];
+
+  const otherToolsImages: TechStackItem[] = [
+    {
+      name: "Git",
+      image: "/assets/logo/git.png",
+    },
+    {
+      name: "Github",
+      image: "/assets/logo/github.png",
+    },
+    {
+      name: "Postman",
+      image: "/assets/logo/postman.png",
+    },
+    {
+      name: "Devtool",
+      image: "/assets/logo/chromeDevTools.png",
+    },
+    {
+      name: "Zod",
+      image: "/assets/logo/zod.png",
+    },
+    {
+      name: "Vs Code",
+      image: "/assets/logo/vscode.png",
+    },
+  ];
+
+  const renderStack = (stack: TechStackItem[], isLast: boolean) =>
+    stack.map((item, index) => (
+      <div
+        key={index}
+        className={`border p-6 group w-full h-[120px] border-gray-200 dark:border-gray-600 ${
+          index === stack.length - 1 ? "border-r-2 xl:border-r" : ""
+        }`}
+      >
+        <Image
+          height={60}
+          width={60}
+          src={item.image}
+          alt={item.name}
+          className={`mx-auto grayscale group-hover:grayscale-0 transition duration-300 ${
+            item.name === "Next Js"
+              ? "bg-gray-600 dark:bg-transparent cursor-pointer rounded-full border"
+              : ""
+          }`}
+        />
+        <h1 className="text-lg pb-2 text-center transition duration-300 font-semibold opacity-0 group-hover:opacity-100">
+          {item.name}
+        </h1>
+      </div>
+    ));
+
   return (
     <Container className="mb-20">
       <SectionHeading
         foreGroundText="TECH STACK"
         backgroundText=" TECH STACK WE USE"
-      ></SectionHeading>
-
-      <div className="grid grid-cols-2 justify-center items-center justify-items-center md:grid-cols-4 lg:grid-cols-6 border-y-2  ">
-        <h1 className="text-3xl font-semibold">FrontEnd</h1>
-        {fontEndImages.map((item) => (
-          <>
-            <div className="border-x-2 p-6 group w-[150px] h-[100px]">
-              <Image
-                height={50}
-                width={50}
-                src={item.image}
-                alt={item.name}
-                className="w-[50px] h-[50px] mx-auto grayscale group-hover:grayscale-0"
-              ></Image>
-              <h1 className="text-sm text-center transition duration-300 font-semibold opacity-0 group-hover:opacity-100">
-                {item.name}
-              </h1>
-            </div>
-          </>
-        ))}
+      />
+      <RevealText
+        inputString="FrontEnd"
+        className="text-center font-semibold text-3xl lg:hidden block py-6"
+      ></RevealText>
+      <div className="grid grid-cols-3 md:grid-cols-3 mx-auto lg:grid-cols-7  items-center ">
+        <RevealText
+          inputString="FrontEnd"
+          className="text-3xl font-semibold border h-[120px] border-gray-200 dark:border-gray-600 lg:flex justify-center items-center hidden"
+        />
+        {renderStack(frontendImages, true)}
       </div>
-      {/* <div></div>
-      <div></div>
-      <div></div>
-      <div></div> */}
+      <RevealText
+        inputString="Backend"
+        className="text-center font-semibold text-3xl lg:hidden block py-6"
+      ></RevealText>
+      <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-7  items-center">
+        <RevealText
+          inputString="Backend"
+          className="text-3xl font-semibold border h-[120px] border-gray-200 dark:border-gray-600 lg:flex justify-center items-center hidden"
+        />
+        {renderStack(backendImages, true)}
+      </div>
+      <RevealText
+        inputString="Tools"
+        className="text-center font-semibold text-3xl lg:hidden block py-6"
+      ></RevealText>
+      <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-7  items-center   ">
+        <RevealText
+          inputString="Tools"
+          className="text-3xl font-semibold border h-[120px] border-gray-200 dark:border-gray-600 lg:flex justify-center items-center hidden"
+        />
+        {renderStack(otherToolsImages, true)}
+      </div>
     </Container>
   );
 };

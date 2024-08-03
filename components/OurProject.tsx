@@ -15,7 +15,7 @@ const OurProject = () => {
           backgroundText="PROJECT WE'VE DONE"
         ></SectionHeading>
       </h1>
-      <div>
+      {/* <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3  gap-4">
           {[1, 2, 3].map((i) => (
             <CardContainer className="inter-var" key={i}>
@@ -58,7 +58,7 @@ const OurProject = () => {
             </CardContainer>
           ))}
         </div>
-      </div>
+      </div> */}
     </Container>
   );
 };
