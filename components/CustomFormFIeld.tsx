@@ -9,7 +9,7 @@ import {
   import { Control } from "react-hook-form";
   import { ReactNode } from "react";
   import Image from "next/image";
-  import { E164Number } from "libphoneNumber-js/core";
+  import { E164Number } from "libphoneNumber-js";
   import "react-phone-number-input/style.css";
   import PhoneInput from "react-phone-number-input";
 import { FormFieldType } from "./form/ContactForm";
