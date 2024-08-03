@@ -43,8 +43,8 @@ const ContactForm = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex-1">
-        <div className="flex gap-6">
-          <div className="w-1/2">
+        <div className="md:flex gap-6 space-y-6 md:space-y-0 ">
+          <div className="md:w-1/2">
             <CustomFormField
               control={form.control}
               className="placeholder:text-lg"
@@ -55,7 +55,7 @@ const ContactForm = () => {
               iconAlt="user"
             />
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2">
             <CustomFormField
               className="placeholder:text-lg"
               control={form.control}
@@ -67,8 +67,8 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <div className="flex gap-6">
-          <div className="w-1/2">
+        <div className="md:flex gap-6 space-y-6 md:space-y-0">
+          <div className="md:w-1/2">
             <CustomFormField
               fieldType={FormFieldType.SELECT}
               control={form.control}
@@ -84,7 +84,7 @@ const ContactForm = () => {
               ))}
             </CustomFormField>
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2">
             <CustomFormField
               control={form.control}
               fieldType={FormFieldType.PHONE_INPUT}

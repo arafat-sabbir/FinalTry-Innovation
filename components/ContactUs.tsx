@@ -38,9 +38,11 @@ const ContactUs = () => {
           foreGroundText="CONTACT US"
           backgroundText="GET IN TOUCH"
         />
-        <div className="w-7/12  pb-20">
-          <h1 className="font-semibold text-4xl  text-black dark:text-white">Have Any Questions?</h1>
-          <p className="my-6">
+        <div className="lg:w-7/12  pb-20 lg:mx-auto xl:mx-0">
+          <h1 className="font-semibold text-4xl text-center xl:text-start  text-black dark:text-white">
+            Have Any Questions?
+          </h1>
+          <p className="my-6 text-center lg:text-start">
             Enthusiastically disintermediate one-to-one leadership via business
             e-commerce. Dramatically reintermediate compelling process
             improvements rather than empowered relationships.
