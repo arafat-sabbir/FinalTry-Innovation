@@ -9,29 +9,29 @@ const Banner = () => {
     <section className="bg-[url('/assets/background/banner_background.svg')] bg-no-repeat">
       <div></div>
       <Container>
-        <div className="flex justify-between  items-center justify-items-center h-[70vh]   ">
+        <div className="flex lg:flex-row flex-col-reverse  justify-between  items-center justify-items-center lg:h-[500px]   ">
           <div>
-            <p className="text-primary text-xl tracking-wide font-semibold">
+            <p className="text-primary text-xl tracking-wide font-semibold text-center lg:text-start">
               SOLUTION FOR YOUR BUSINESS
             </p>
-            <h1 className="text-5xl font-semibold tracking-wide my-4">
-              Providing Technology <br /> For Smart
-              <span className="text-primary font-bold">IT Solution</span>
+            <h1 className="lg:text-5xl md:text-4xl text-4xl lg:text-start text-center font-semibold tracking-wide my-4">
+              Providing Technology <br /> For Smart 
+               <span className="text-primary font-bold ml-4">IT Solution</span>
             </h1>
-            <p className="text-primary   ">
+            <p className="text-primary   text-center lg:text-start">
               Rapidiously streamline revolutionary networks with technically
               sound deliverables. Authoritatively <br /> integrate installed
               base web-readiness. Quickly maximize superior process
             </p>
-            <CustomButton className="mt-4 bg-primary">Book An Appointment</CustomButton>
+            <CustomButton className="mt-4 bg-primary mx-auto lg:mx-0">Book An Appointment</CustomButton>
           </div>
           <div>
-            <CardContainer className="cursor-pointer 2xl:w-11/12 w-8/12 ">
+            <CardContainer containerClassName="py-0" className="cursor-pointer ">
               <CardItem>
                 <Image
                   src={"/assets/background/banner_background.png"}
-                  width={400}
-                  height={400}
+                  width={380}
+                  height={380}
                   alt="bannerPerson"
                 ></Image>
               </CardItem>
