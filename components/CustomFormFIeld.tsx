@@ -88,7 +88,7 @@ import { cn } from "@/lib/utils";
           case FormFieldType.SELECT:
             return (
               <FormControl >
-                <Select className="border border-red-500" onValueChange={field.onChange} defaultValue={field.value}>
+                <Select  onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger className="shad-select-trigger">
                       <SelectValue placeholder={props.placeholder} />
