@@ -29,7 +29,7 @@ const Banner = () => {
             <CardContainer containerClassName="py-0" className="cursor-pointer ">
               <CardItem>
                 <Image
-                  src={"/assets/background/banner_background.png"}
+                  src={"/assets/background/banner.png"}
                   width={380}
                   height={380}
                   alt="bannerPerson"
