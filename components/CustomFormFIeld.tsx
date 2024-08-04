@@ -14,7 +14,8 @@ import { Input } from "./ui/input";
 import { Control } from "react-hook-form";
 import { ReactNode } from "react";
 import Image from "next/image";
-import { E164Number } from "libphoneNumber-js";
+import { E164Number } from "libphonenumber-js";
+
 import "react-phone-number-input/style.css";
 import { FormFieldType } from "./form/ContactForm";
 import { Textarea } from "./ui/textarea";

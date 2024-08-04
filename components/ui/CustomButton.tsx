@@ -13,7 +13,7 @@ const CustomButton = ({
   return (
     <button
       className={cn(
-        "relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-yellow-500 rounded-md group",
+        "relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all border- rounded-md group",
         className
       )}
     >
