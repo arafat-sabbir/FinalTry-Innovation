@@ -38,6 +38,7 @@ const ContactForm = () => {
   // 2. Define a submit handler.
   const onSubmit = async (values: z.infer<typeof ContactFormValidation>) => {
     const id = toast.loading("Sending Message...");
+    console.log(values);
     const res = await fetch("/api/sendMail", {
       method: "POST",
       headers: {

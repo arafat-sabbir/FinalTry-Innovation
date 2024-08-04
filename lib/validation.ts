@@ -6,21 +6,16 @@ export const ContactFormValidation = z.object({
     .min(2, { message: "Username must be at least 2 characters." }),
   email: z.string().email("Invalid Email Address"),
   phone: z
-    .string()
-    .refine(
-      (phone) =>
-        /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(phone),
-      "Invalid Phone Number"
-    ),
-  service: z
-    .enum([
-      "Software Development",
-      "Web Development",
-      "App Development",
-      "Logo & Brand Design",
-      "Content Writing",
-      "Seo",
-    ]),
+    .string({ required_error: "Invalid Phone Number" })
+    .min(11, { message: "Phone Number Must Be 11 Digits Long" }),
+  service: z.enum([
+    "Software Development",
+    "Web Development",
+    "App Development",
+    "Logo & Brand Design",
+    "Content Writing",
+    "Seo",
+  ]),
   message: z
     .string()
     .min(10, { message: "Message must be at least 10 characters." }),
