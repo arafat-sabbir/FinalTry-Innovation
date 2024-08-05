@@ -18,7 +18,7 @@ const Banner = () => {
               Providing Technology <br /> For Smart 
                <span className="text-primary font-bold ml-4">IT Solution</span>
             </h1>
-            <p className="text-primary   text-center lg:text-start">
+            <p className="text-primary   text-center lg:text-start text-balance">
               Rapidiously streamline revolutionary networks with technically
               sound deliverables. Authoritatively <br /> integrate installed
               base web-readiness. Quickly maximize superior process

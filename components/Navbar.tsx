@@ -58,7 +58,7 @@ const Navbar = () => {
               Support Us
             </Button>
           </div>
-          <div className="lg:hidden block">
+          <div className="lg:hidden block ">
             {!open && (
               <svg
                 onClick={toggleNavbar}
@@ -79,7 +79,7 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className={`lg:hidden absolute top-0 right-0 bg-white border-l h-[100vh] overflow-hidden transition-all duration-300 dark:bg-gray-900`}
+          className={`lg:hidden absolute z-50 top-0 right-0 bg-white border-l h-[100vh] overflow-hidden transition-all duration-300 dark:bg-gray-900`}
           style={{ maxWidth: open ? "15rem" : "0", width: "100%" }}
         >
           <div className="flex justify-between w-full p-4">
