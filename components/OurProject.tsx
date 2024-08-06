@@ -35,21 +35,21 @@ const OurProject = () => {
           <div className="relative mx-auto">
             <Image
               className="absolute top-0 md:w-[300px] w-[280px]  right-32 animate-moveLeft"
-              src="/assets/project/2.png"
+              src="/assets/project/second.png"
               width={300}
               height={600}
               alt="project image"
             />
             <Image
               className="absolute right-16 md:w-[300px] w-[280px] -top-4 z-10 animate-scaleUp"
-              src="/assets/project/1.png"
+              src="/assets/project/first.png"
               width={300}
               height={600}
               alt="project image"
             />
             <Image
               className="absolute top-0 md:w-[300px] w-[280px] right-0 animate-moveRight"
-              src="/assets/project/3.png"
+              src="/assets/project/third.png"
               width={300}
               height={600}
               alt="project image"
