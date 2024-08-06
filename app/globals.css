@@ -106,7 +106,6 @@ html {
 
 @keyframes moveRight {
   0%, 100% {
-    /* transform: rotate(6deg); */
   }
   50% {
     transform: rotate(18deg);
@@ -116,7 +115,6 @@ html {
 
 @keyframes moveLeft {
   0%, 100% {
-    /* transform: rotate(-6deg); */
   }
   50% {
     transform: rotate(-18deg);
@@ -136,6 +134,4 @@ html {
 .custom-box-shadow {
   box-shadow: 20px 20px 60px #00000041, inset -20px -20px 60px #ffffff40;
 }
-.custom-box-shadow-dark {
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5), inset 10px 10px 30px rgba(255, 255, 255, 0.1);
-}
+
