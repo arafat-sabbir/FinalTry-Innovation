@@ -1,13 +1,35 @@
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Container from "./Container";
-import { TextGenerateEffect } from "./ui/text-generate-effect";
-import RevealText from "./RevealText";
 import SectionHeading from "./SectionHeading";
-import { lazy } from "react";
+import ProjectCard from "./ProjectCard";
+import { Linkedin } from "lucide-react";
 
 const OurProject = () => {
+  const features = [
+    {
+      title: "Built for developers",
+      description:
+        "Built for engineers, developers, dreamers, thinkers and doers.",
+      icon: <Linkedin />,
+    },
+    {
+      title: "Ease of use",
+      description:
+        "It's as easy as using an Apple, and as expensive as buying one.",
+      icon: <Linkedin />,
+    },
+    {
+      title: "Pricing like no other",
+      description:
+        "Our prices are best in the market. No cap, no lock, no credit card required.",
+      icon: <Linkedin />,
+    },
+    {
+      title: "100% Uptime guarantee",
+      description: "We just cannot be taken down by anyone.",
+      icon: <Linkedin />,
+    },
+  ];
   return (
     <Container className="mt-8">
       <h1>
@@ -24,17 +46,16 @@ const OurProject = () => {
           <p className="mb-4 text-center lg:text-start">
             General Knowledge Apps For Admission Students And Teachers
           </p>
-          <div className="grid md:grid-cols-2  grid-cols-1 gap-10 justify-center items-center justify-items-center">
-            <div className=" h-60  w-60 rounded-md   border hover:custom-box-shadow"></div>
-            <div className="  h-60  w-60 rounded-md   border hover:custom-box-shadow"></div>
-            <div className="  h-60  w-60 rounded-md   border hover:custom-box-shadow"></div>
-            <div className="  h-60  w-60 rounded-md   border hover:custom-box-shadow"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  relative z-10 py-10 max-w-7xl mx-auto">
+            {features.map((feature, index) => (
+              <ProjectCard key={feature.title} {...feature} index={index} />
+            ))}
           </div>
         </div>
-        <section className="md:min-w-[450px] min-w-[100vw] min-h-[450px] md:mb-14  mb-6 lg:mb-0">
+        <section className="md:min-w-[450px] border-2 min-w-[90vw] min-h-[470px] md:mb-14  mb-6 lg:mb-0">
           <div className="relative mx-auto">
             <Image
-              className="absolute top-0 md:w-[300px] w-[280px]  right-32 animate-moveLeft"
+              className="absolute top-0 md:w-[300px] w-[280px] max-[400px]:w-[150px] sm: right-32 animate-moveLeft"
               src="/assets/project/second.png"
               width={300}
               height={600}

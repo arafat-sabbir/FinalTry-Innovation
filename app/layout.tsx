@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Roboto, Barlow } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
-import AnimatedCursor from "react-animated-cursor";
 import { Toaster } from "sonner";
 
 const roboto = Roboto({
@@ -27,19 +26,6 @@ export default function RootLayout({
           {children}
         </ThemeProvider>
         <Toaster richColors={true} />
-        <AnimatedCursor
-          innerSize={8}
-          outerSize={35}
-          innerScale={1}
-          outerScale={2}
-          outerAlpha={0}
-          innerStyle={{
-            backgroundColor: "var(--cursor-color)",
-          }}
-          outerStyle={{
-            border: "3px solid #41b4a3",
-          }}
-        />
       </body>
     </html>
   );
