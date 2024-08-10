@@ -1,20 +1,25 @@
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const ProjectCard = ({
   title,
   description,
   icon,
   index,
+  link,
 }: {
   title: string;
   description: string;
   icon: React.ReactNode;
   index: number;
+  link?: string;
 }) => {
   return (
-    <div
+    <a
+      href={link}
       className={cn(
         "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800",
+        link && "cursor-pointer",
         (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
         index < 4 && "lg:border-b dark:border-neutral-800"
       )}
@@ -37,7 +42,7 @@ const ProjectCard = ({
       <p className="text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
         {description}
       </p>
-    </div>
+    </a>
   );
 };
 export default ProjectCard;

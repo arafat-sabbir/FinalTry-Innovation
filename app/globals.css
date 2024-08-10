@@ -141,5 +141,5 @@ html {
 }
 
 .project-image {
-  @apply mx-auto md:h-[550px] w-[90vw] h-[300px] mb-10 lg:mb-0  rounded-xl lg:w-[500px] bg-cover bg-top hover:bg-bottom bg-no-repeat transition-transform duration-6000;
+  @apply mx-auto md:h-[470px] w-[90vw] h-[300px] mb-10 lg:mb-0  rounded-xl lg:w-[500px] bg-cover bg-top hover:bg-bottom bg-no-repeat transition-all duration-6000;
 }

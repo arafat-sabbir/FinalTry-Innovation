@@ -1,37 +1,45 @@
-import { ExternalLink, Github, Linkedin } from "lucide-react";
+import {
+  DollarSign,
+  ExternalLink,
+  Github,
+  Linkedin,
+  ShieldCheck,
+  ShoppingCart,
+  SquareArrowOutUpRight,
+} from "lucide-react";
 import Container from "./Container";
 import ProjectCard from "./ProjectCard";
 
 const WebProjects = () => {
   const features = [
     {
-      title: "Built for developers",
-      description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
-      icon: <Linkedin />,
+      title: "Buy Property",
+      description: "User Can Buy Property Added By The Agent",
+      icon: <ShoppingCart />,
     },
     {
-      title: "Ease of use",
+      title: "Selling Property",
       description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
-      icon: <Linkedin />,
+        "Agent Can Sell Their Property If Admin Verify The Property Request",
+      icon: <DollarSign />,
     },
     {
-      title: "Pricing like no other",
+      title: "Manage Property Review And Rating",
       description:
-        "Our prices are best in the market. No cap, no lock, no credit card required.",
-      icon: <Linkedin />,
+        "Admin Can Manage Everything From Property To User,Review And Rating",
+      icon: <ShieldCheck />,
     },
     {
-      title: "100% Uptime guarantee",
+      title: "Checkout Live Preview",
       description: "We just cannot be taken down by anyone.",
-      icon: <Linkedin />,
+      icon: <SquareArrowOutUpRight />,
+      link:"https://cute-hotteok-edc7ca.netlify.app"
     },
   ];
   return (
-    <Container className="py-20 ">
-      <div className="flex flex-col-reverse lg:flex-row">
-        <div>
+    <Container >
+      <div className="flex flex-col-reverse lg:flex-row justify-center items-center justify-items-center">
+        <div >
           <h1 className="text-3xl text-center lg:text-start tracking-wide font-semibold dark:text-primary">
             Echo Estate (Real Estate Website)
           </h1>
@@ -44,7 +52,7 @@ const WebProjects = () => {
             ))}
           </div>
         </div>
-        <div className="project-image bg-[url('/assets/project/echo-estate.png')]" />
+        <div className="border-primary/50 border project-image bg-[url('/assets/project/echo-estate.png')]" />
       </div>
     </Container>
   );
