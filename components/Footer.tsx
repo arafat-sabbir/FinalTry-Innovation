@@ -81,7 +81,7 @@ const Footer = () => {
                     Products
                   </h3>
                   <a
-                    href="#"
+                    href="https://play.google.com/store/apps/details?id=com.thesaymondev.zacai&pli=1"
                     className="block mt-2 text-sm text-primary font-semibold dark:text-gray-400 hover:underline"
                   >
                     Zacai

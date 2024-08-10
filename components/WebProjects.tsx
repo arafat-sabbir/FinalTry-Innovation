@@ -1,8 +1,5 @@
 import {
   DollarSign,
-  ExternalLink,
-  Github,
-  Linkedin,
   ShieldCheck,
   ShoppingCart,
   SquareArrowOutUpRight,
@@ -31,15 +28,15 @@ const WebProjects = () => {
     },
     {
       title: "Checkout Live Preview",
-      description: "We just cannot be taken down by anyone.",
+      description: "Test And Explore Our Project ",
       icon: <SquareArrowOutUpRight />,
-      link:"https://cute-hotteok-edc7ca.netlify.app"
+      link: "https://cute-hotteok-edc7ca.netlify.app",
     },
   ];
   return (
     <Container className="lg:pb-20">
       <div className="flex flex-col-reverse lg:flex-row justify-center items-center justify-items-center">
-        <div >
+        <div>
           <h1 className="text-3xl text-center lg:text-start tracking-wide font-semibold dark:text-primary">
             Echo Estate (Real Estate Website)
           </h1>
