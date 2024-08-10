@@ -139,3 +139,7 @@ html {
     20px 20px 60px #00000041,
     inset -20px -20px 60px #ffffff40;
 }
+
+.project-image {
+  @apply mx-auto md:h-[550px] w-[90vw] h-[300px] mb-10 lg:mb-0  rounded-xl lg:w-[500px] bg-cover bg-top hover:bg-bottom bg-no-repeat transition-transform duration-6000;
+}

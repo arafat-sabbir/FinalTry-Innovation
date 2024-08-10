@@ -29,7 +29,7 @@ const ScrollToTop = () => {
 
   return (
     <motion.button
-      className="fixed bottom-8 right-8 border-[3px] shadow-lg rounded-full p-4 text-main text-3xl"
+      className="fixed z-[100] bottom-8 right-8 border-[3px] shadow-lg rounded-full p-4 text-main text-3xl"
       onClick={scrollToTop}
       initial={{ scale: 0 }}
       animate={{

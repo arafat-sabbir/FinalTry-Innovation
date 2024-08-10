@@ -43,7 +43,7 @@ const MobileApps = () => {
     </div>
   </div>
   <section className="md:min-w-[450px]  min-w-[90vw] min-h-[470px] md:mb-14  mb-6 lg:mb-0">
-    <div className="relative mx-auto">
+    {/* <div className="relative mx-auto">
       <Image
         className="absolute top-0 md:w-[300px] w-[280px] max-[400px]:w-[150px] sm: right-32 animate-moveLeft"
         src="/assets/project/second.png"
@@ -65,7 +65,7 @@ const MobileApps = () => {
         height={600}
         alt="project image"
       />
-    </div>
+    </div> */}
   </section>
 </div>;
 };

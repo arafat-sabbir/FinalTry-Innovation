@@ -1,6 +1,7 @@
 import Container from "./Container";
 import MobileApps from "./MobileApps";
 import SectionHeading from "./SectionHeading";
+import WebProjects from "./WebProjects";
 
 const OurProject = () => {
   return (
@@ -12,6 +13,7 @@ const OurProject = () => {
         ></SectionHeading>
       </h1>
       <MobileApps />
+      <WebProjects />
     </Container>
   );
 };
