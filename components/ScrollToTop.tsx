@@ -28,10 +28,13 @@ const ScrollToTop = () => {
   }, []);
 
   // Calculate progress as a percentage of total scrollable height
-  const progress =
-    scrollY /
-    (document.documentElement.scrollHeight -
-      document.documentElement.clientHeight);
+  let progress;
+  if (typeof window !== "undefined") {
+    progress =
+      scrollY /
+      (document.documentElement.scrollHeight -
+        document.documentElement.clientHeight);
+  }
 
   return (
     <motion.button
@@ -39,7 +42,7 @@ const ScrollToTop = () => {
       onClick={scrollToTop}
       initial={{ scale: 0 }}
       animate={{
-        scale: progress > 0.15 ? 1 : 0,
+        scale: progress! > 0.15 ? 1 : 0,
         borderColor: `hsla(171.1, 47%, 48%, ${progress})`,
       }}
       transition={{ duration: 0.3 }}
