@@ -37,7 +37,7 @@ const WebProjects = () => {
     },
   ];
   return (
-    <Container >
+    <Container className="lg:pb-20">
       <div className="flex flex-col-reverse lg:flex-row justify-center items-center justify-items-center">
         <div >
           <h1 className="text-3xl text-center lg:text-start tracking-wide font-semibold dark:text-primary">

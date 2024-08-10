@@ -30,7 +30,7 @@ const MobileApps = () => {
     },
   ];
   return (
-    <div className="flex justify-between flex-col-reverse lg:flex-row items-center w-full justify-items-center">
+    <div className="flex justify-between flex-col-reverse lg:flex-row items-center w-full justify-items-center lg:py-20">
       <div className="flex-1">
         <h1 className="md:text-3xl text-2xl mb-2 text-center lg:text-start tracking-wide font-semibold dark:text-primary">
           Zacai (General Knowledge Apps)
