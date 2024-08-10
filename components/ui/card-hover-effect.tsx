@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
@@ -19,14 +20,14 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3    justify-items-center gap-7 ",
+        "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  justify-items-center   gap-7  py-6 mx-auto w-[95vw]  lg:w-auto",
         className
       )}
     >
       {items.map((item, idx) => (
         <div
           key={item?.title}
-          className="relative group  block p-2 h-[270px] w-[300px]"
+          className="relative group  block  h-[270px] w-[300px]"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >

@@ -1,6 +1,5 @@
-"use client";
+
 import Container from "./Container";
-import RevealText from "./RevealText";
 import SectionHeading from "./SectionHeading";
 import { HoverEffect } from "./ui/card-hover-effect";
 
