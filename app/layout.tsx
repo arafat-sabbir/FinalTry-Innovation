@@ -3,6 +3,7 @@ import { Roboto, Barlow } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
 import { Toaster } from "sonner";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
         </ThemeProvider>
+        <ScrollToTop />
         <Toaster richColors={true} />
       </body>
     </html>

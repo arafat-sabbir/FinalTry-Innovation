@@ -79,9 +79,9 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        scaleUp: "scaleUp 4s ease-in-out infinite",
-        moveRight: "moveRight 4s ease-in-out infinite",
-        moveLeft: "moveLeft 4s ease-in-out infinite",
+        scaleUp: "scaleUp 5s ease infinite",
+        moveRight: "moveRight 5s ease infinite",
+        moveLeft: "moveLeft 5s ease infinite",
       },
     },
   },

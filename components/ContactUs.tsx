@@ -6,7 +6,7 @@ import ContactForm from "./form/ContactForm";
 const ContactUs = () => {
 
   return (
-    <section className="bg-[url('/assets/background/contact_bg.png')] bg-no-repeat bg-cover dark:bg-opacity-50  pb-20 ">
+    <section id="contact" className="bg-[url('/assets/background/contact_bg.png')] bg-no-repeat bg-cover dark:bg-opacity-50  pb-20 ">
       <Container>
         <SectionHeading
           foreGroundText="CONTACT US"

@@ -41,7 +41,10 @@ const Navbar = () => {
             <a className="hover:text-primary  cursor-pointer transition-all duration-300">
               About Us
             </a>
-            <a className="hover:text-primary  cursor-pointer transition-all duration-300">
+            <a
+              href="#ourProjects"
+              className="hover:text-primary  cursor-pointer transition-all duration-300"
+            >
               Our Projects
             </a>
           </ul>
@@ -55,7 +58,7 @@ const Navbar = () => {
               <span className="sr-only">Toggle theme</span>
             </Button>
             <Button className="lg:block hidden dark:text-white">
-              Support Us
+              <a href="#contact">Contact Us</a>
             </Button>
           </div>
           <div className="lg:hidden block ">

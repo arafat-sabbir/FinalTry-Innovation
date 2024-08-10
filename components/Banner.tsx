@@ -23,7 +23,8 @@ const Banner = () => {
               sound deliverables. Authoritatively <br /> integrate installed
               base web-readiness. Quickly maximize superior process
             </p>
-            <CustomButton className="mt-4 bg-primary mx-auto lg:mx-0">Book An Appointment</CustomButton>
+            <CustomButton  className="mt-4  bg-primary mx-auto lg:mx-0"><a href="#contact" className="px-4">Book Appointment</a></CustomButton>
+            
           </div>
           <div>
             <CardContainer containerClassName="py-0" className="cursor-pointer ">
