@@ -141,5 +141,11 @@ html {
 }
 
 .project-image {
-  @apply mx-auto md:h-[470px] w-[90vw] h-[300px] mb-10 lg:mb-0  rounded-xl lg:w-[500px] bg-cover bg-top hover:bg-bottom bg-no-repeat transition-all duration-6000;
+  background-position: top;
+  transition: background-position 0.6s ease-in-out;
+  @apply mx-auto lg:h-[470px] md:h-[500px] w-[90vw] h-[350px] mb-10 lg:mb-0  rounded-xl lg:w-[500px] bg-cover  bg-no-repeat duration-6000;
+}
+
+.project-image:hover {
+  background-position: bottom;
 }

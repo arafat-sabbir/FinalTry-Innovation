@@ -3,7 +3,7 @@ import { useState } from "react";
 import Container from "./Container";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
-import { Moon, Sun } from "lucide-react";
+import { CircleAlert, House, Moon, Package, Sun } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
@@ -82,11 +82,13 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className={`lg:hidden absolute z-50 top-0 right-0 bg-white border-l h-[100vh] overflow-hidden transition-all duration-300 dark:bg-gray-900`}
+          className={`lg:hidden  z-50 top-0 right-0 bg-white border-l h-[100vh] fixed overflow-hidden transition-all duration-300 dark:bg-gray-900`}
           style={{ maxWidth: open ? "15rem" : "0", width: "100%" }}
         >
           <div className="flex justify-between w-full p-4">
-            <h1>FinalTry Innovation</h1>
+            <h1 className="px-2 text-md text-primary font-bold">
+              FinalTry Innovations
+            </h1>
             <svg
               onClick={toggleNavbar}
               xmlns="http://www.w3.org/2000/svg"
@@ -104,9 +106,16 @@ const Navbar = () => {
             </svg>
           </div>
           <ul className="w-full p-4">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Our Projects</li>
+            <a className="flex gap-2  p-2">
+              <House /> Home
+            </a>
+            <a href="#contact" className="flex gap-2  p-2">
+              <CircleAlert /> Contact Us
+            </a>
+            <a href="#ourProjects" className="flex gap-2  p-2">
+              {" "}
+              <Package /> Our Projects
+            </a>
           </ul>
         </div>
       </Container>

@@ -44,30 +44,30 @@ const MobileApps = () => {
           ))}
         </div>
       </div>
-      <section className="md:min-w-[450px] border  min-w-[95vw] min-h-[470px] md:mb-14  mb-6 lg:mb-0">
+      <section className="md:min-w-[460px]  min-w-[95vw] min-h-[450px]  md:min-h-[500px] md:mb-14  mb-6 lg:mb-0 overflow-hidden">
         <div className="relative mx-auto">
-      <Image
-        className="absolute top-0 md:w-[300px] w-[280px] max-[375px]:w-[220px] right-32 animate-moveLeft"
-        src="/assets/project/second.png"
-        width={300}
-        height={600}
-        alt="project image"
-      />
-      <Image
-        className="absolute max-[375px]:w-[220px] right-16 md:w-[300px] w-[280px] -top-4 z-10 animate-scaleUp"
-        src="/assets/project/first.png"
-        width={300}
-        height={600}
-        alt="project image"
-      />
-      <Image
-        className="absolute top-0 max-[375px]:w-[220px] md:w-[300px] w-[280px] right-0 animate-moveRight"
-        src="/assets/project/third.png"
-        width={300}
-        height={600}
-        alt="project image"
-      />
-    </div>
+          <Image
+            className="absolute top-4 md:w-[300px] w-[260px] max-[375px]:w-[210px] right-[132px] animate-moveLeft"
+            src="/assets/project/second.png"
+            width={300}
+            height={600}
+            alt="project image"
+          />
+          <Image
+            className="absolute max-[375px]:w-[210px] right-[68px] md:w-[300px] w-[260px] -top-0 z-10 animate-scaleUp"
+            src="/assets/project/first.png"
+            width={300}
+            height={600}
+            alt="project image"
+          />
+          <Image
+            className="absolute top-4 max-[375px]:w-[210px] md:w-[300px] w-[260px] right-[4px] animate-moveRight"
+            src="/assets/project/third.png"
+            width={300}
+            height={600}
+            alt="project image"
+          />
+        </div>
       </section>
     </div>
   );
