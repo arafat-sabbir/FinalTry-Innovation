@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="px-6">
                 <a className="text-xl font-semibold">
                   Final<span className="text-primary font-bold">Try</span>{" "}
-                  Innovation
+                  Innovations
                 </a>
 
                 <p className="max-w-sm mt-2 text-gray-500 dark:text-gray-400">
@@ -42,7 +42,7 @@ const Footer = () => {
                     href="#"
                     className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                   >
-                    community
+                    Community
                   </a>
                   <a
                     href="#"

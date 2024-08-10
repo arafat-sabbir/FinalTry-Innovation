@@ -17,7 +17,7 @@ const MobileApps = () => {
       icon: <Brain />,
     },
     {
-      title: "Test Your General Knowledge",
+      title: "Test And Track Your General Knowledge",
       description:
         "From Our App You Can Give Quiz Test To Test Your General Knowledge About Various Subjects.",
       icon: <ShieldCheck />,
@@ -44,7 +44,7 @@ const MobileApps = () => {
           ))}
         </div>
       </div>
-      <section className="md:min-w-[460px]  min-w-[95vw] min-h-[450px]  md:min-h-[500px] md:mb-14  mb-6 lg:mb-0 overflow-hidden">
+      <section className="md:min-w-[460px]  min-w-[96vw] min-h-[450px]  md:min-h-[500px] md:mb-14  mb-6 lg:mb-0 overflow-hidden">
         <div className="relative mx-auto">
           <Image
             className="absolute top-4 md:w-[300px] w-[260px] max-[375px]:w-[210px] right-[132px] animate-moveLeft"
