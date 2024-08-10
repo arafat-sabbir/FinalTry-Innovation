@@ -109,7 +109,7 @@ const OurTechStacks = () => {
               : ""
           }`}
         />
-        <h1 className="text-lg pb-2 text-center transition duration-300 font-semibold opacity-0 group-hover:opacity-100">
+        <h1 className="md:text-lg pb-2 text-center transition duration-300 font-semibold opacity-0 group-hover:opacity-100">
           {item.name}
         </h1>
       </div>
