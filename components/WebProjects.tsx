@@ -18,7 +18,7 @@ const WebProjects = () => {
       icon: <ShoppingCart />,
     },
     {
-      title: "Selling Property",
+      title: "Sell Property",
       description:
         "Agent Can Sell Their Property If Admin Verify The Property Request",
       icon: <DollarSign />,

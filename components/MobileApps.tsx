@@ -1,26 +1,26 @@
 import Image from "next/image";
 import ProjectCard from "./ProjectCard";
-import { Linkedin, SquareArrowOutUpRight } from "lucide-react";
+import { BookOpenCheck, Brain, Linkedin, ShieldCheck, SquareArrowOutUpRight } from "lucide-react";
 
 const MobileApps = () => {
   const features = [
     {
-      title: "Built for developers",
+      title: "Prepare For Public Exam Or Admission",
       description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
-      icon: <Linkedin />,
+        "Prepare For Public Exam Like (BSC) (NTRC) (Bank Job) From Our Apps",
+      icon:<BookOpenCheck />,
     },
     {
-      title: "Ease of use",
+      title: "Increase Your General Knowledge",
       description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
-      icon: <Linkedin />,
+        "By Studying From Our Apps You Can Gain General Knowledge About Various Subjects.",
+      icon: <Brain />,
     },
     {
-      title: "Pricing like no other",
+      title: "Test Your General Knowledge",
       description:
-        "Our prices are best in the market. No cap, no lock, no credit card required.",
-      icon: <Linkedin />,
+        "From Our App You Can Give Quiz Test To Test Your General Knowledge About Various Subjects.",
+      icon: <ShieldCheck />,
     },
     {
       title: "Try Our Apps From Play Store",

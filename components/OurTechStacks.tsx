@@ -42,12 +42,12 @@ const OurTechStacks = () => {
       image: "/assets/logo/node.png",
     },
     {
-      name: "Typescript",
-      image: "/assets/logo/typescript.png",
-    },
-    {
       name: "Express Js",
       image: "/assets/logo/express.png",
+    },
+    {
+      name: "My Sql",
+      image: "/assets/logo/mysql.png",
     },
     {
       name: "MongoDb",

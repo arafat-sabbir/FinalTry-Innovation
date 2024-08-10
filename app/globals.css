@@ -75,6 +75,7 @@
 html {
   --cursor-color: #333;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 .dark {
