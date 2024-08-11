@@ -8,6 +8,11 @@ import ScrollToTop from "@/components/ScrollToTop";
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
+  variable: "--font-roboto",
+});
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["400", "500","600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -21,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={roboto.className}>
+    <html lang="en" className={roboto.variable}>
+      <body className={barlow.className}>
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
         </ThemeProvider>

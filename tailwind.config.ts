@@ -28,6 +28,7 @@ const config = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+
         dark: {
           200: "#0D0F10",
           300: "#131619",
@@ -60,6 +61,9 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      fontFamily: {
+        roboto: ["var(--font-roboto)"],
       },
       borderRadius: {
         lg: "var(--radius)",

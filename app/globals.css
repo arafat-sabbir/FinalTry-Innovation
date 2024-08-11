@@ -59,7 +59,9 @@
     --chart-5: 340 75% 55%;
   }
 }
-
+p {
+  font-family: var(--font-roboto)!important;
+}
 @layer base {
   * {
     @apply border-border;
