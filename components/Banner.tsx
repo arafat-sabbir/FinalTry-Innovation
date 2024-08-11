@@ -12,8 +12,6 @@ const Banner = () => {
             <p className="text-primary text-xl tracking-wide font-semibold text-center lg:text-start font-barlow">
               SOLUTION FOR YOUR BUSINESS
             </p>
-            <p className="font-barlow">This text will use the Barlow font.</p>
-
             <h1 className="lg:text-5xl md:text-4xl text-4xl max-[375px]:text-3xl lg:text-start text-center font-semibold tracking-wide my-4">
               Providing Technology <br /> For Smart
               <span className="text-primary font-bold ml-4">IT Solution</span>

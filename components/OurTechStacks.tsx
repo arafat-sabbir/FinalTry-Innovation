@@ -159,12 +159,12 @@ const OurTechStacks = () => {
         {renderStack(frontendImages, true)}
       </div>
       <RevealText
-        inputString="Backend"
+        inputString="BackEnd"
         className="text-center font-semibold text-3xl lg:hidden block py-6"
       ></RevealText>
       <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-7  items-center">
         <RevealText
-          inputString="Backend"
+          inputString="BackEnd"
           className="text-3xl font-semibold border h-[120px] border-gray-200 dark:border-gray-600 lg:flex justify-center items-center hidden"
         />
         {renderStack(backendImages, true)}
