@@ -63,7 +63,37 @@ const OurTechStacks = () => {
     },
   ];
 
-  const otherToolsImages: TechStackItem[] = [
+  const MobileAppsImages: TechStackItem[] = [
+    {
+      name: "Flutter",
+      image: "/assets/logo/flutter.png",
+    },
+    {
+      name: "Dart",
+      image: "/assets/logo/dart.png",
+    },
+    {
+      name: "Android Studio",
+      image: "/assets/logo/android-studio.png",
+    },
+    {
+      name: "Github",
+      image: "/assets/logo/github.png",
+    },
+    {
+      name: "Git",
+      image: "/assets/logo/git.png",
+    },
+    {
+      name: "Postman",
+      image: "/assets/logo/postman.png",
+    },
+  ];
+  const ToolsImages: TechStackItem[] = [
+    {
+      name: "Vs Code",
+      image: "/assets/logo/vscode.png",
+    },
     {
       name: "Git",
       image: "/assets/logo/git.png",
@@ -73,20 +103,16 @@ const OurTechStacks = () => {
       image: "/assets/logo/github.png",
     },
     {
+      name: "Figma",
+      image: "/assets/logo/figma.png",
+    },
+    {
       name: "Postman",
       image: "/assets/logo/postman.png",
     },
     {
-      name: "Devtool",
-      image: "/assets/logo/chromeDevTools.png",
-    },
-    {
       name: "Zod",
       image: "/assets/logo/zod.png",
-    },
-    {
-      name: "Vs Code",
-      image: "/assets/logo/vscode.png",
     },
   ];
 
@@ -94,7 +120,7 @@ const OurTechStacks = () => {
     stack.map((item, index) => (
       <div
         key={index}
-        className={`border p-6 group w-full h-[120px] border-gray-200 dark:border-gray-600 ${
+        className={`border py-6 group w-full h-[120px] border-gray-200 dark:border-gray-600 ${
           index === stack.length - 1 ? "border-r-2 xl:border-r" : ""
         }`}
       >
@@ -109,7 +135,7 @@ const OurTechStacks = () => {
               : ""
           }`}
         />
-        <h1 className="md:text-lg pb-2 text-center transition duration-300 font-semibold opacity-0 group-hover:opacity-100">
+        <h1 className="md:text-lg w-full text-center transition duration-300 font-semibold opacity-0 group-hover:opacity-100">
           {item.name}
         </h1>
       </div>
@@ -144,6 +170,17 @@ const OurTechStacks = () => {
         {renderStack(backendImages, true)}
       </div>
       <RevealText
+        inputString="Mobile Apps"
+        className="text-center font-semibold text-3xl lg:hidden block py-6"
+      ></RevealText>
+      <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-7  items-center   ">
+        <RevealText
+          inputString="MobileApps"
+          className="text-3xl font-semibold border h-[120px] border-gray-200 dark:border-gray-600 lg:flex justify-center items-center hidden"
+        />
+        {renderStack(MobileAppsImages, true)}
+      </div>
+      <RevealText
         inputString="Tools"
         className="text-center font-semibold text-3xl lg:hidden block py-6"
       ></RevealText>
@@ -152,7 +189,7 @@ const OurTechStacks = () => {
           inputString="Tools"
           className="text-3xl font-semibold border h-[120px] border-gray-200 dark:border-gray-600 lg:flex justify-center items-center hidden"
         />
-        {renderStack(otherToolsImages, true)}
+        {renderStack(ToolsImages, true)}
       </div>
     </Container>
   );
