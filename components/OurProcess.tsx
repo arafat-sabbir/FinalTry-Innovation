@@ -30,17 +30,12 @@ const sdlcSteps = [
     title: "Deployment",
     description: "Releasing the software to production.",
     icon: "🚀",
-  },
-  {
-    title: "Maintenance",
-    description: "Maintaining and updating the software.",
-    icon: "🔧",
-  },
+  }
 ];
 
 const OurProcess = () => {
   return (
-    <section className="py-12 bg-gray-100 dark:bg-[#020817]">
+    <section className="pt-12 pb-32 bg-gray-100 dark:bg-[#020817]">
       <div className="container mx-auto px-4">
         <SectionHeading
           backgroundText="How We Operate"

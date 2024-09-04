@@ -23,9 +23,13 @@ const Navbar = () => {
       <Container>
         <div className="h-20 items-center px-5  lg:px-0 flex justify-between">
           <div className=" flex items-center lg:text-2xl font-medium tracking-wider">
-            <Image className="text-xl font-semibold" src={"/finaltryinnovations.png"} width={60} height={60} alt="Finaltry Innovations Logo"/>
-            <h1 className="lg:flex items-center hidden">FinalTry Innovations</h1>
-           
+            <Image
+              className="text-xl font-semibold"
+              src={"/companyLogo.svg"}
+              width={160}
+              height={160}
+              alt="Finaltry Innovations Logo"
+            />
           </div>
 
           <ul className="lg:flex hidden gap-6">
