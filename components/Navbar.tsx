@@ -21,10 +21,11 @@ const Navbar = () => {
   return (
     <nav className="bg-white border-b text-black w-full relative dark:bg-gray-900 dark:text-white ">
       <Container>
-        <div className="h-20 items-center px-5 lg:px-0 flex justify-between">
-          <div>
-            <Image className="text-xl font-semibold" src={"/finaltryinnovation.png"} width={150} height={150} alt="Finaltry Innovations Logo">
-            </Image>
+        <div className="h-20 items-center px-5  lg:px-0 flex justify-between">
+          <div className=" flex items-center lg:text-2xl font-medium tracking-wider">
+            <Image className="text-xl font-semibold" src={"/finaltryinnovations.png"} width={60} height={60} alt="Finaltry Innovations Logo"/>
+            <h1 className="lg:flex items-center hidden">FinalTry Innovations</h1>
+           
           </div>
 
           <ul className="lg:flex hidden gap-6">
