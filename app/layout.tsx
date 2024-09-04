@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
 import { Toaster } from "sonner";
 import ScrollToTop from "@/components/ScrollToTop";
-
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -12,7 +11,7 @@ const roboto = Roboto({
 });
 const barlow = Barlow({
   subsets: ["latin"],
-  weight: ["400", "500","600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -28,7 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.variable}>
       <body className={barlow.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider
+          attribute="class"
+          disableTransitionOnChange
+          defaultTheme="dark"
+        >
           {children}
         </ThemeProvider>
         <ScrollToTop />
