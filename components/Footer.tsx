@@ -1,5 +1,6 @@
 import { Facebook, Github, Linkedin } from "lucide-react";
 import Container from "./Container";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -9,10 +10,8 @@ const Footer = () => {
           <div className="lg:flex">
             <div className="w-full -mx-6 lg:w-2/5">
               <div className="px-6">
-                <a className="text-xl font-semibold">
-                  Final<span className="text-primary font-bold">Try</span>{" "}
-                  Innovations
-                </a>
+              <Image className="text-xl font-semibold" src={"/finaltryinnovation.png"} width={100}  height={50} alt="Finaltry Innovations Logo">
+              </Image>
 
                 <p className="max-w-sm mt-2 text-gray-500 dark:text-gray-400">
                   Get Your Desired Software Without Any Hassle From Us

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { CircleAlert, House, Moon, Package, Sun } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
@@ -13,8 +14,6 @@ const Navbar = () => {
   const toggleNavbar = () => {
     setOpen(!open);
   };
-  console.log(pathName);
-
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
@@ -24,10 +23,8 @@ const Navbar = () => {
       <Container>
         <div className="h-20 items-center px-5 lg:px-0 flex justify-between">
           <div>
-            <h1 className="text-xl font-semibold">
-              Final<span className="text-primary font-bold">Try</span>
-              Innovations
-            </h1>
+            <Image className="text-xl font-semibold" src={"/finaltryinnovation.png"} width={150} height={150} alt="Finaltry Innovations Logo">
+            </Image>
           </div>
 
           <ul className="lg:flex hidden gap-6">
