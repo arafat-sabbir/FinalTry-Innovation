@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 import { CircleAlert, House, Moon, Package, Sun } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
@@ -22,7 +23,7 @@ const Navbar = () => {
     <nav className="bg-white border-b text-black w-full relative dark:bg-gray-900 dark:text-white ">
       <Container>
         <div className="h-20 items-center px-5  lg:px-0 flex justify-between">
-          <div className=" flex items-center lg:text-2xl font-medium tracking-wider">
+          <Link href={"/"} className=" flex items-center lg:text-2xl font-medium tracking-wider">
             <Image
               className="text-xl font-semibold"
               src={"/companyLogo.svg"}
@@ -30,7 +31,7 @@ const Navbar = () => {
               height={160}
               alt="Finaltry Innovations Logo"
             />
-          </div>
+          </Link>
 
           <ul className="lg:flex hidden gap-6">
             <a
@@ -59,9 +60,9 @@ const Navbar = () => {
               )}
               <span className="sr-only">Toggle theme</span>
             </Button>
-            <Button className="lg:block hidden dark:text-white">
-              <a href="#contact">Contact Us</a>
-            </Button>
+            <a href="#contact" className="lg:block hidden dark:text-white">
+              <Button >Contact Us</Button>
+            </a>
           </div>
           <div className="lg:hidden block ">
             {!open && (
@@ -115,7 +116,6 @@ const Navbar = () => {
               <CircleAlert /> Contact Us
             </a>
             <a href="#ourProjects" className="flex gap-2  p-2">
-              {" "}
               <Package /> Our Projects
             </a>
           </ul>
