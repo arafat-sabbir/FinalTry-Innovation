@@ -89,9 +89,15 @@ const Navbar = () => {
           style={{ maxWidth: open ? "15rem" : "0", width: "100%" }}
         >
           <div className="flex justify-between w-full p-4">
-            <h1 className="px-2 text-md text-primary font-bold">
-              FinalTry Innovations
-            </h1>
+          <Link href={"/"} className=" flex items-center lg:text-2xl font-medium tracking-wider">
+            <Image
+              className="text-xl font-semibold"
+              src={"/companyLogo.svg"}
+              width={120}
+              height={120}
+              alt="Finaltry Innovations Logo"
+            />
+          </Link>
             <svg
               onClick={toggleNavbar}
               xmlns="http://www.w3.org/2000/svg"
