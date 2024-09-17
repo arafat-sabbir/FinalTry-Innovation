@@ -1,6 +1,7 @@
 import { Facebook, Github, Linkedin } from "lucide-react";
 import Container from "./Container";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -103,12 +104,18 @@ const Footer = () => {
                   <h3 className="text-gray-700 uppercase dark:text-white">
                     Contact
                   </h3>
-                  <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
-                    +8801632029032
-                  </span>
-                  <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
-                    finaltry@gmail.com
-                  </span>
+                  <Link
+                    href={"tel:+8801705669795"}
+                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                  >
+                    +8801705669795
+                  </Link>
+                  <Link
+                    href={"mailto:finaltryinnovations@gmail.com"}
+                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                  >
+                    finaltryinnovations@gmail.com
+                  </Link>
                 </div>
               </div>
             </div>
