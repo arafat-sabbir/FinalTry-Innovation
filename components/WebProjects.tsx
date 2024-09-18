@@ -30,7 +30,7 @@ const WebProjects = () => {
       title: "Checkout Live Preview",
       description: "Test And Explore Our Project ",
       icon: <SquareArrowOutUpRight />,
-      link: "https://cute-hotteok-edc7ca.netlify.app",
+      link: "https://echo-state.web.app/",
     },
   ];
   return (
@@ -49,7 +49,7 @@ const WebProjects = () => {
             ))}
           </div>
         </div>
-        <div className="border-primary/50 border project-image bg-[url('/assets/project/echo-estate.png')]" />
+        <div className="border-primary/50 hover:cursor-pointer border project-image bg-[url('/assets/project/echo-estate.png')]" />
       </div>
     </Container>
   );

@@ -52,12 +52,12 @@ const OurProcess = () => {
           initial="hidden"
           whileInView="reveal"
           transition={{ staggerChildren: 0.2 }}
-          className="pt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 overflow-hidden"
+          className="py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 overflow-hidden"
         >
-          {sdlcSteps.map((step, index) => (
+        {sdlcSteps.map((step, index) => (
             <motion.div
               variants={charVariants}
-              transition={{ all: 1 }}
+              transition={{ all: 0.8}}
               key={index}
               className="flex flex-col items-center p-6 bg-white dark:bg-[#1F2937] rounded-lg shadow-md"
             >
