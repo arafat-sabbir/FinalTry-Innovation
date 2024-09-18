@@ -15,7 +15,7 @@ export const ContactFormValidation = z.object({
     "Logo & Brand Design",
     "Content Writing",
     "Seo",
-  ]),
+  ],{message:"Service Is Required"}),
   message: z
     .string()
     .min(10, { message: "Message must be at least 10 characters." }),

@@ -41,7 +41,7 @@ const Navbar = () => {
             >
               Home
             </a>
-            <a className="hover:text-primary  cursor-pointer transition-all duration-300">
+            <a href="#aboutUs" className="hover:text-primary  cursor-pointer transition-all duration-300">
               About Us
             </a>
             <a
@@ -88,7 +88,7 @@ const Navbar = () => {
           className={`lg:hidden  z-50 top-0 right-0 bg-white border-l h-[100vh] fixed overflow-hidden transition-all duration-300 dark:bg-gray-900`}
           style={{ maxWidth: open ? "15rem" : "0", width: "100%" }}
         >
-          <div className="flex justify-between w-full p-4">
+          <div className="flex justify-between w-full p-4 pt-6">
           <Link href={"/"} className=" flex items-center lg:text-2xl font-medium tracking-wider">
             <Image
               className="text-xl font-semibold"

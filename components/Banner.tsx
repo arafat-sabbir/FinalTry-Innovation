@@ -21,11 +21,11 @@ const Banner = () => {
               sound deliverables. Authoritatively <br /> integrate installed
               base web-readiness. Quickly maximize superior process
             </p>
-            <CustomButton className="mt-4  bg-primary mx-auto lg:mx-0">
-              <a href="#contact" className="px-4">
+            <a href="#contact" className="px-4">
+              <CustomButton className="mt-4  bg-primary mx-auto lg:mx-0">
                 Book Appointment
-              </a>
-            </CustomButton>
+              </CustomButton>
+            </a>
           </div>
           <div>
             <CardContainer
