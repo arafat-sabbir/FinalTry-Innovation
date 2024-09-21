@@ -5,6 +5,7 @@ const CustomButton = ({
   children,
   className,
   textClassName,
+  ...props
 }: {
   className?: string;
   children: ReactNode;
@@ -12,8 +13,9 @@ const CustomButton = ({
 }) => {
   return (
     <button
+      {...props}
       className={cn(
-        "relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all border- rounded-md group",
+        "relative flex disabled:cursor-not-allowed items-center px-6 py-3 overflow-hidden font-medium transition-all border- rounded-md group",
         className
       )}
     >

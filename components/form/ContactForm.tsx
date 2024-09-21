@@ -8,6 +8,8 @@ import { ContactFormValidation } from "@/lib/validation";
 import { SelectItem } from "../ui/select";
 import CustomButton from "../ui/CustomButton";
 import { toast } from "sonner";
+import { useState } from "react";
+import { Loader } from "lucide-react";
 
 export enum FormFieldType {
   INPUT = "input",
@@ -16,6 +18,7 @@ export enum FormFieldType {
   SELECT = "select",
 }
 const ContactForm = () => {
+  const [loading, setLoading] = useState<boolean>(false);
   const form = useForm<z.infer<typeof ContactFormValidation>>({
     resolver: zodResolver(ContactFormValidation),
     defaultValues: {
@@ -37,20 +40,22 @@ const ContactForm = () => {
 
   // 2. Define a submit handler.
   const onSubmit = async (values: z.infer<typeof ContactFormValidation>) => {
-    const id = toast.loading("Sending Message...");
-    console.log(values);
-    const res = await fetch("/api/sendMail", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
-    });
-    if (res.status === 200) {
+    try {
+      setLoading(true);
+      const id = toast.loading("Sending Message...");
+      await fetch("/api/sendMail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
       toast.success("Message Sent Successfully", { id });
       form.reset();
-    } else {
-      toast.error("Something went wrong", { id });
+    } catch (error: any) {
+      toast.error(error.message);
+    } finally {
+      setLoading(false);
     }
   };
   return (
@@ -115,9 +120,10 @@ const ContactForm = () => {
         />
         <CustomButton
           className="mt-4 bg-primary mx-auto lg:mx-0 w-full"
-          textClassName="text-center"
+         disabled={loading}
+          textClassName="text-center flex items-center gap-2 justify-center"
         >
-          Make An Appointment
+          Make An Appointment {loading&&<Loader className="animate-spin"/>}
         </CustomButton>
       </form>
     </Form>
