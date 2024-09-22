@@ -5,15 +5,16 @@ const CustomButton = ({
   children,
   className,
   textClassName,
-  ...props
+  disabled,
 }: {
   className?: string;
   children: ReactNode;
   textClassName?: string;
+  disabled?: boolean;
 }) => {
   return (
     <button
-      {...props}
+      disabled={disabled}
       className={cn(
         "relative flex disabled:cursor-not-allowed items-center px-6 py-3 overflow-hidden font-medium transition-all border- rounded-md group",
         className
