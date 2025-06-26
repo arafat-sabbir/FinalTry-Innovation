@@ -57,7 +57,7 @@ const OurProcess = () => {
         {sdlcSteps.map((step, index) => (
             <motion.div
               variants={charVariants}
-              transition={{ all: 0.8}}
+              transition={{ duration: 0.8}}
               key={index}
               className="flex flex-col items-center p-6 bg-white dark:bg-[#1F2937] rounded-lg shadow-md"
             >

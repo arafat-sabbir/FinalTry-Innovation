@@ -5,36 +5,25 @@ import { motion } from "framer-motion";
 
 const ScrollToTop = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [progress, setProgress] = useState(0);
 
   const scrollToTop = () => {
-    if (typeof window !== "undefined") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      if (typeof window !== "undefined") {
-        setScrollY(window.scrollY);
-      }
+      const y = window.scrollY;
+      setScrollY(y);
+      const totalHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      setProgress(y / totalHeight);
     };
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }
-  }, []);
 
-  // Calculate progress as a percentage of total scrollable height
-  let progress;
-  if (typeof window !== "undefined") {
-    progress =
-      scrollY /
-      (document.documentElement.scrollHeight -
-        document.documentElement.clientHeight);
-  }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <motion.button
@@ -42,7 +31,7 @@ const ScrollToTop = () => {
       onClick={scrollToTop}
       initial={{ scale: 0 }}
       animate={{
-        scale: progress! > 0.15 ? 1 : 0,
+        scale: progress > 0.15 ? 1 : 0,
         borderColor: `hsla(171.1, 47%, 48%, ${progress})`,
       }}
       transition={{ duration: 0.3 }}

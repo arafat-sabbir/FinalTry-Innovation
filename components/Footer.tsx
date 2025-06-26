@@ -24,9 +24,26 @@ const Footer = () => {
                 </p>
 
                 <div className="flex mt-6 -mx-2 gap-4">
-                  <Facebook />
-                  <Github />
-                  <Linkedin />
+                  <Link
+                    target="_blank"
+                    href="https://www.facebook.com/finaltryinnovations"
+                  >
+                    <Facebook />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href={"https://github.com/finaltry-innovations"}
+                  >
+                    <Github />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href={
+                      "https://www.linkedin.com/company/finaltry-innovations"
+                    }
+                  >
+                    <Linkedin />
+                  </Link>
                 </div>
               </div>
             </div>
