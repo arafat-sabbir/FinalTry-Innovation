@@ -6,7 +6,7 @@ export const ContactFormValidation = z.object({
     .min(2, { message: "Username must be at least 2 characters." }),
   email: z.string().email("Invalid Email Address"),
   phone: z
-    .string({ required_error: "Invalid Phone Number" })
+    .string()
     .min(11, { message: "Phone Number Must Be 11 Digits Long" }),
   service: z.enum([
     "Software Development",

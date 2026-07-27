@@ -64,7 +64,7 @@ const ContactForm = () => {
         <div className="md:flex gap-6 space-y-6 md:space-y-0 ">
           <div className="md:w-1/2">
             <CustomFormField
-              control={form.control}
+              control={form.control as any}
               className="placeholder:text-lg"
               fieldType={FormFieldType.INPUT}
               name="name"
@@ -76,7 +76,7 @@ const ContactForm = () => {
           <div className="md:w-1/2">
             <CustomFormField
               className="placeholder:text-lg"
-              control={form.control}
+              control={form.control as any}
               fieldType={FormFieldType.INPUT}
               name="email"
               placeholder="Enter Your Email"
@@ -89,7 +89,7 @@ const ContactForm = () => {
           <div className="md:w-1/2">
             <CustomFormField
               fieldType={FormFieldType.SELECT}
-              control={form.control}
+              control={form.control as any}
               name="service"
               placeholder="Select a Service"
             >
@@ -104,7 +104,7 @@ const ContactForm = () => {
           </div>
           <div className="md:w-1/2">
             <CustomFormField
-              control={form.control}
+              control={form.control as any}
               fieldType={FormFieldType.PHONE_INPUT}
               name="phone"
               placeholder="Phone Number"
@@ -112,7 +112,7 @@ const ContactForm = () => {
           </div>
         </div>
         <CustomFormField
-          control={form.control}
+          control={form.control as any}
           fieldType={FormFieldType.TEXTAREA}
           name="message"
           className="placeholder:text-lg"

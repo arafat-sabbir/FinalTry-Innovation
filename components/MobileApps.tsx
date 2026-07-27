@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ProjectCard from "./ProjectCard";
-import { BookOpenCheck, Brain, Linkedin, ShieldCheck, SquareArrowOutUpRight } from "lucide-react";
+import { BookOpenCheck, Brain, ShieldCheck, SquareArrowOutUpRight } from "lucide-react";
 
 const MobileApps = () => {
   const features = [
