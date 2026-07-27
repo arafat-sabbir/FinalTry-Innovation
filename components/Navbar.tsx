@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "./Container";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
@@ -12,6 +12,12 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const pathName = usePathname();
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const toggleNavbar = () => {
     setOpen(!open);
   };
@@ -53,7 +59,7 @@ const Navbar = () => {
           </ul>
           <div className="flex md:gap-6 gap-2">
             <Button variant="outline" size="icon" onClick={toggleTheme}>
-              {theme === "light" ? (
+              {mounted && theme === "light" ? (
                 <Sun className="h-[1.2rem] w-[1.2rem] rotate-90 scale-100 transition-all" />
               ) : (
                 <Moon className="h-[1.2rem] w-[1.2rem] text-white scale-100 transition-all" />
